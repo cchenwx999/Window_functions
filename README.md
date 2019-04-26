@@ -21,9 +21,10 @@ from ql_sales;
 > partition by with a sub-clause order by in sum/avg, it will get the running total/average
 [example](https://stackoverflow.com/questions/10039431/how-can-i-use-sum-over)
  
- [More](https://codingsight.com/calculating-running-total-with-over-clause-and-partition-by-clause-in-sql-server/)
+> [More](https://codingsight.com/calculating-running-total-with-over-clause-and-partition-by-clause-in-sql-server/)
   
-  group by is performed before window function
+ 
+ #### Running term
 
   
   1. from
