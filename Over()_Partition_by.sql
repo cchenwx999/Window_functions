@@ -85,3 +85,15 @@ from ql_sales;
  [More](https://codingsight.com/calculating-running-total-with-over-clause-and-partition-by-clause-in-sql-server/)
   
   group by is performed before window function
+
+  
+  1. from
+  2. where
+  3. group by
+  4. having
+  5. select
+  6. order by
+  7. limit
+  
+ -- Window functions are executed/calculated at the same stage as SELECT, stage 5 in above table. 
+ -- In other words, window functions are applied to all rows that are "visible" in the SELECT stage.
