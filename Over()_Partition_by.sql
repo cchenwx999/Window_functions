@@ -68,3 +68,10 @@ select emp_name, dealer_id, sales, avg(sales) over() as avgsales from q1_sales;
    | 3          | 15427  | Ursa George     | 3    | 12368         |
    +------------+--------+-----------------+------+---------------+
    10 rows selected (0.37 seconds)
+
+
+#### RANK() and DENSE_RANK()
+-- RANK() would give the identical rows a rank of 2, then skip ranks 3 and 4, so the next result would be 5
+-- DENSE_RANK() would still give all the identical rows a rank of 2, but the following row would be 3—no ranks would be skipped.
+select dealer_id, sales, emp_name, rank() over (partition by dealer_id order by sales) as 'row'
+from ql_sales;
