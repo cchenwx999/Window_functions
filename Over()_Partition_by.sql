@@ -77,4 +77,9 @@ select dealer_id, sales, emp_name, rank() over (partition by dealer_id order by 
 from ql_sales;
 
 
-https://codingsight.com/calculating-running-total-with-over-clause-and-partition-by-clause-in-sql-server/
+
+#### Running Total
+-- partition by with a sub-clause order by in sum/avg, it will get the running total/average
+[example](https://stackoverflow.com/questions/10039431/how-can-i-use-sum-over)
+ 
+ [More](https://codingsight.com/calculating-running-total-with-over-clause-and-partition-by-clause-in-sql-server/)
