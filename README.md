@@ -1,4 +1,4 @@
-# Windows_functions
+# Window_functions
 
 capture some useful examples and resources about Window functions
 
