@@ -83,3 +83,5 @@ from ql_sales;
 [example](https://stackoverflow.com/questions/10039431/how-can-i-use-sum-over)
  
  [More](https://codingsight.com/calculating-running-total-with-over-clause-and-partition-by-clause-in-sql-server/)
+  
+  group by is performed before window function
