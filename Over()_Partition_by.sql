@@ -75,3 +75,6 @@ select emp_name, dealer_id, sales, avg(sales) over() as avgsales from q1_sales;
 -- DENSE_RANK() would still give all the identical rows a rank of 2, but the following row would be 3—no ranks would be skipped.
 select dealer_id, sales, emp_name, rank() over (partition by dealer_id order by sales) as 'row'
 from ql_sales;
+
+
+https://codingsight.com/calculating-running-total-with-over-clause-and-partition-by-clause-in-sql-server/
