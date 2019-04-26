@@ -10,15 +10,15 @@ the link of [Drill Apache](https://drill.apache.org/docs/sql-window-functions-in
 
 
 #### RANK() and DENSE_RANK()
--- RANK() would give the identical rows a rank of 2, then skip ranks 3 and 4, so the next result would be 5
--- DENSE_RANK() would still give all the identical rows a rank of 2, but the following row would be 3—no ranks would be skipped.
+> RANK() would give the identical rows a rank of 2, then skip ranks 3 and 4, so the next result would be 5
+> DENSE_RANK() would still give all the identical rows a rank of 2, but the following row would be 3—no ranks would be skipped.
 select dealer_id, sales, emp_name, rank() over (partition by dealer_id order by sales) as 'row'
 from ql_sales;
 
 
 
 #### Running Total
--- partition by with a sub-clause order by in sum/avg, it will get the running total/average
+> partition by with a sub-clause order by in sum/avg, it will get the running total/average
 [example](https://stackoverflow.com/questions/10039431/how-can-i-use-sum-over)
  
  [More](https://codingsight.com/calculating-running-total-with-over-clause-and-partition-by-clause-in-sql-server/)
@@ -34,5 +34,4 @@ from ql_sales;
   6. order by
   7. limit
   
- -- Window functions are executed/calculated at the same stage as SELECT, stage 5 in above table. 
- -- In other words, window functions are applied to all rows that are "visible" in the SELECT stage.
+ > Window functions are executed/calculated at the same stage as SELECT, stage 5 in above table.  In other words, window functions are applied to all rows that are "visible" in the SELECT stage.
